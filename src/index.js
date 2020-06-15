@@ -1,3 +1,5 @@
+import 'regenerator-runtime';
+
 import "bulma/css/bulma.min.css";
 import "./styles/main.css";
 

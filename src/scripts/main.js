@@ -47,7 +47,7 @@ function main() {
 
   document.addEventListener("DOMContentLoaded", () => {
     const countryButton = document.querySelector("#search-button");
-    countryButton.addEventListener("click", function() {
+    countryButton.addEventListener("click", () => {
       searchCountry();
     });
   });
