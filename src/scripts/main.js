@@ -10,7 +10,8 @@ function main() {
       const responseJson = await response.json();
       return fillCard(responseJson);
     } catch (error) {
-      alert('ada kesalahan');
+      alert('Data yang anda cari tidak ada!');
+      return fillCard({recovered: {value: 0}, deaths: {value: 0}, confirmed: {value: 0} })
     }
   };
 
@@ -33,6 +34,23 @@ function main() {
       </div>
     `
   }
+
+  const searchCountry = () => {
+    const country = document.getElementById("country").value;
+    const title = document.getElementById("country-title");
+    if (country.length < 1) {
+      return;
+    }
+    fetchData(country);
+    title.innerHTML = country;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const countryButton = document.querySelector("#search-button");
+    countryButton.addEventListener("click", function() {
+      searchCountry();
+    });
+  });
 
   fetchData();
 }

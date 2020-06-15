@@ -13,9 +13,27 @@
       <section class="hero is-info is-fullheight">
         <div class="hero-body">
           <div class="container">
-            <h1 class="title">COVID 19 <span id="country">Global Data</span></h1>
-            <h2 class="subtitle">Data per <i id="date">No Data</i></h2>
-            <div class="cards"></div>
+            <div class="row">
+              <div class="column">
+                <div class="field has-addons">
+                  <div class="control  is-expanded">
+                    <input type="text" id="country" class="input is-rounded" placeholder="Masukkan negara" />
+                  </div>
+                  <p class="control">
+                    <button class="button is-success" id="search-button">
+                      Cari
+                    </button>
+                  </p>
+                </div>
+              </div>
+              <div class="column">
+                <h1 class="title">
+                  COVID 19 <span id="country-title">Global</span> Data
+                </h1>
+                <h2 class="subtitle">Data per <i id="date">No Data</i></h2>
+                <div class="cards"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
